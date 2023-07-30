@@ -14,10 +14,11 @@
 		43288D7429DF6C1F00A9F6A5 /* G.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43288D6D29DF6C1F00A9F6A5 /* G.wav */; };
 		43288D7529DF6C1F00A9F6A5 /* E.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43288D6E29DF6C1F00A9F6A5 /* E.wav */; };
 		43288D7629DF6C1F00A9F6A5 /* D.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43288D6F29DF6C1F00A9F6A5 /* D.wav */; };
+		433A29352A76C816002D6B67 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A29342A76C816002D6B67 /* MainView.swift */; };
+		433A29382A76CDB6002D6B67 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 433A29372A76CDB6002D6B67 /* SnapKit */; };
 		438AEE2F29DD3592007678A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AEE2E29DD3592007678A9 /* AppDelegate.swift */; };
 		438AEE3129DD3592007678A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AEE3029DD3592007678A9 /* SceneDelegate.swift */; };
 		438AEE3329DD3592007678A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AEE3229DD3592007678A9 /* ViewController.swift */; };
-		438AEE3629DD3592007678A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438AEE3429DD3592007678A9 /* Main.storyboard */; };
 		438AEE3829DD3597007678A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438AEE3729DD3597007678A9 /* Assets.xcassets */; };
 		438AEE3B29DD3597007678A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438AEE3929DD3597007678A9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -30,11 +31,11 @@
 		43288D6D29DF6C1F00A9F6A5 /* G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = G.wav; sourceTree = "<group>"; };
 		43288D6E29DF6C1F00A9F6A5 /* E.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = E.wav; sourceTree = "<group>"; };
 		43288D6F29DF6C1F00A9F6A5 /* D.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = D.wav; sourceTree = "<group>"; };
+		433A29342A76C816002D6B67 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		438AEE2B29DD3592007678A9 /* Xylophone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xylophone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438AEE2E29DD3592007678A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		438AEE3029DD3592007678A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		438AEE3229DD3592007678A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		438AEE3529DD3592007678A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		438AEE3729DD3597007678A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438AEE3A29DD3597007678A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		438AEE3C29DD3597007678A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433A29382A76CDB6002D6B67 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +89,7 @@
 				438AEE2E29DD3592007678A9 /* AppDelegate.swift */,
 				438AEE3029DD3592007678A9 /* SceneDelegate.swift */,
 				438AEE3229DD3592007678A9 /* ViewController.swift */,
-				438AEE3429DD3592007678A9 /* Main.storyboard */,
+				433A29342A76C816002D6B67 /* MainView.swift */,
 				438AEE3729DD3597007678A9 /* Assets.xcassets */,
 				438AEE3929DD3597007678A9 /* LaunchScreen.storyboard */,
 				438AEE3C29DD3597007678A9 /* Info.plist */,
@@ -113,6 +115,7 @@
 			);
 			name = Xylophone;
 			packageProductDependencies = (
+				433A29372A76CDB6002D6B67 /* SnapKit */,
 			);
 			productName = Xylophone;
 			productReference = 438AEE2B29DD3592007678A9 /* Xylophone.app */;
@@ -143,6 +146,7 @@
 			);
 			mainGroup = 438AEE2229DD3592007678A9;
 			packageReferences = (
+				433A29362A76CDB6002D6B67 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 438AEE2C29DD3592007678A9 /* Products */;
 			projectDirPath = "";
@@ -166,7 +170,6 @@
 				43288D7229DF6C1F00A9F6A5 /* B.wav in Resources */,
 				43288D7529DF6C1F00A9F6A5 /* E.wav in Resources */,
 				43288D7629DF6C1F00A9F6A5 /* D.wav in Resources */,
-				438AEE3629DD3592007678A9 /* Main.storyboard in Resources */,
 				43288D7129DF6C1F00A9F6A5 /* C.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				438AEE3329DD3592007678A9 /* ViewController.swift in Sources */,
+				433A29352A76C816002D6B67 /* MainView.swift in Sources */,
 				438AEE2F29DD3592007678A9 /* AppDelegate.swift in Sources */,
 				438AEE3129DD3592007678A9 /* SceneDelegate.swift in Sources */,
 			);
@@ -187,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		438AEE3429DD3592007678A9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				438AEE3529DD3592007678A9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		438AEE3929DD3597007678A9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -334,7 +330,6 @@
 				INFOPLIST_FILE = Xylophone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -364,7 +359,6 @@
 				INFOPLIST_FILE = Xylophone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -404,6 +398,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		433A29362A76CDB6002D6B67 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		433A29372A76CDB6002D6B67 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 433A29362A76CDB6002D6B67 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 438AEE2329DD3592007678A9 /* Project object */;
 }

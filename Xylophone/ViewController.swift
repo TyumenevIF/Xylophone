@@ -6,28 +6,51 @@
 //
 
 import UIKit
+import SnapKit
 import AVFoundation
 
 class ViewController: UIViewController {
     
+    private let mainView = MainView()
     var player: AVAudioPlayer!
 
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    @IBAction func keyPressed(_ sender: UIButton) {
-        playSound(soundName: sender.currentTitle!)
-        
-        sender.alpha = 0.5
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            sender.alpha = 1
-        }
+        mainView.delegate = self
+        setViews()
+        setupConstraints()
     }
     
-    func playSound(soundName: String) {
+    // MARK: - Private Methods
+    private func playSound(soundName: String) {
         let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
+    }
+    
+    private func setViews() {
+        view.addSubview(mainView)
+    }
+    
+    private func setupConstraints() {
+        mainView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            make.leading.trailing.equalToSuperview()
+        }
+    }
+}
+
+// MARK: - MainViewDelegate
+extension ViewController: MainViewDelegate {
+    
+    func mainView(_ view: MainView, buttonPressed button: UIButton) {
+        playSound(soundName: button.currentTitle!)
+        
+        button.alpha = 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            button.alpha = 1
+        }
     }
 }
