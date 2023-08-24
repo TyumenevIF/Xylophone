@@ -17,6 +17,13 @@ class MainView: UIView {
     weak var delegate: MainViewDelegate?
     
     // MARK: - Properties
+    private let cKey: UIView = {
+        let view = UIView()
+        view.contentMode = .scaleToFill
+        view.backgroundColor = .systemBackground
+        return view
+    }()
+    
     lazy var cButton: UIButton = {
         let button = UIButton()
         button.setTitle("C", for: .normal)
@@ -27,6 +34,13 @@ class MainView: UIView {
         button.backgroundColor = .systemRed
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         return button
+    }()
+    
+    private let dKey: UIView = {
+        let view = UIView()
+        view.contentMode = .scaleToFill
+        view.backgroundColor = .systemBackground
+        return view
     }()
     
     lazy var dButton: UIButton = {
@@ -41,6 +55,13 @@ class MainView: UIView {
         return button
     }()
     
+    private let eKey: UIView = {
+        let view = UIView()
+        view.contentMode = .scaleToFill
+        view.backgroundColor = .systemBackground
+        return view
+    }()
+    
     lazy var eButton: UIButton = {
         let button = UIButton()
         button.setTitle("E", for: .normal)
@@ -51,6 +72,13 @@ class MainView: UIView {
         button.backgroundColor = .systemYellow
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         return button
+    }()
+    
+    private let fKey: UIView = {
+        let view = UIView()
+        view.contentMode = .scaleToFill
+        view.backgroundColor = .systemBackground
+        return view
     }()
     
     lazy var fButton: UIButton = {
@@ -65,6 +93,13 @@ class MainView: UIView {
         return button
     }()
     
+    private let gKey: UIView = {
+        let view = UIView()
+        view.contentMode = .scaleToFill
+        view.backgroundColor = .systemBackground
+        return view
+    }()
+    
     lazy var gButton: UIButton = {
         let button = UIButton()
         button.setTitle("G", for: .normal)
@@ -77,6 +112,13 @@ class MainView: UIView {
         return button
     }()
     
+    private let aKey: UIView = {
+        let view = UIView()
+        view.contentMode = .scaleToFill
+        view.backgroundColor = .systemBackground
+        return view
+    }()
+    
     lazy var aButton: UIButton = {
         let button = UIButton()
         button.setTitle("A", for: .normal)
@@ -87,6 +129,13 @@ class MainView: UIView {
         button.backgroundColor = .systemBlue
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         return button
+    }()
+    
+    private let bKey: UIView = {
+        let view = UIView()
+        view.contentMode = .scaleToFill
+        view.backgroundColor = .systemBackground
+        return view
     }()
     
     lazy var bButton: UIButton = {
@@ -107,13 +156,13 @@ class MainView: UIView {
         stack.alignment = .fill
         stack.distribution = .fillEqually
         stack.spacing = 8.0
-        [self.cButton,
-         self.dButton,
-         self.eButton,
-         self.fButton,
-         self.gButton,
-         self.aButton,
-         self.bButton].forEach { stack.addArrangedSubview($0) }
+        [self.cKey,
+         self.dKey,
+         self.eKey,
+         self.fKey,
+         self.gKey,
+         self.aKey,
+         self.bKey].forEach { stack.addArrangedSubview($0) }
         return stack
     }()
     
@@ -131,40 +180,67 @@ class MainView: UIView {
     // MARK: - Private Methods
     private func setSubviews() {
         addSubview(stackView)
+        cKey.addSubview(cButton)
+        dKey.addSubview(dButton)
+        eKey.addSubview(eButton)
+        fKey.addSubview(fButton)
+        gKey.addSubview(gButton)
+        aKey.addSubview(aButton)
+        bKey.addSubview(bButton)
     }
     
     private func setupConstraints() {
         stackView.snp.makeConstraints { (make) in
-            make.top.bottom.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
+            make.edges.equalTo(safeAreaLayoutGuide.snp.edges)
         }
         
         cButton.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(5)
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview().inset(5)
+            make.trailing.equalToSuperview().inset(5)
+            make.bottom.equalToSuperview()
         }
         
         dButton.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(10)
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview().inset(10)
+            make.trailing.equalToSuperview().inset(10)
+            make.bottom.equalToSuperview()
         }
         
         eButton.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(15)
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview().inset(15)
+            make.trailing.equalToSuperview().inset(15)
+            make.bottom.equalToSuperview()
         }
         
         fButton.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(25)
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview().inset(25)
+            make.trailing.equalToSuperview().inset(25)
+            make.bottom.equalToSuperview()
         }
         
         gButton.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(30)
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview().inset(30)
+            make.trailing.equalToSuperview().inset(30)
+            make.bottom.equalToSuperview()
         }
         
         aButton.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(35)
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview().inset(35)
+            make.trailing.equalToSuperview().inset(35)
+            make.bottom.equalToSuperview()
         }
         
         bButton.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(40)
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview().inset(40)
+            make.trailing.equalToSuperview().inset(40)
+            make.bottom.equalToSuperview()
         }
     }
 }

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         mainView.delegate = self
         setSubviews()
         setupConstraints()
@@ -36,8 +37,9 @@ class ViewController: UIViewController {
     private func setupConstraints() {
         mainView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing)
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-            make.leading.trailing.equalToSuperview()
         }
     }
 }
