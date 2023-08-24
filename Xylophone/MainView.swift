@@ -16,8 +16,8 @@ class MainView: UIView {
     
     weak var delegate: MainViewDelegate?
     
-    // MARK: - Private Properties
-    private let cButton: UIButton = {
+    // MARK: - Properties
+    lazy var cButton: UIButton = {
         let button = UIButton()
         button.setTitle("C", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 40)
@@ -29,7 +29,7 @@ class MainView: UIView {
         return button
     }()
     
-    private let dButton: UIButton = {
+    lazy var dButton: UIButton = {
         let button = UIButton()
         button.setTitle("D", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 40)
@@ -41,7 +41,7 @@ class MainView: UIView {
         return button
     }()
     
-    private let eButton: UIButton = {
+    lazy var eButton: UIButton = {
         let button = UIButton()
         button.setTitle("E", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 40)
@@ -53,7 +53,7 @@ class MainView: UIView {
         return button
     }()
     
-    private let fButton: UIButton = {
+    lazy var fButton: UIButton = {
         let button = UIButton()
         button.setTitle("F", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 40)
@@ -65,7 +65,7 @@ class MainView: UIView {
         return button
     }()
     
-    private let gButton: UIButton = {
+    lazy var gButton: UIButton = {
         let button = UIButton()
         button.setTitle("G", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 40)
@@ -77,7 +77,7 @@ class MainView: UIView {
         return button
     }()
     
-    private let aButton: UIButton = {
+    lazy var aButton: UIButton = {
         let button = UIButton()
         button.setTitle("A", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 40)
@@ -89,7 +89,7 @@ class MainView: UIView {
         return button
     }()
     
-    private let bButton: UIButton = {
+    lazy var bButton: UIButton = {
         let button = UIButton()
         button.setTitle("B", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 40)
