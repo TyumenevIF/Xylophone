@@ -120,8 +120,8 @@ class MainView: UIView {
     // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addViews()
-        addConstraints()
+        setSubviews()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -129,11 +129,11 @@ class MainView: UIView {
     }
     
     // MARK: - Private Methods
-    private func addViews() {
+    private func setSubviews() {
         addSubview(stackView)
     }
     
-    private func addConstraints() {
+    private func setupConstraints() {
         stackView.snp.makeConstraints { (make) in
             make.top.bottom.equalToSuperview()
             make.leading.trailing.equalToSuperview()

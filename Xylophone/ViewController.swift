@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mainView.delegate = self
-        setViews()
+        setSubviews()
         setupConstraints()
     }
     
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         player.play()
     }
     
-    private func setViews() {
+    private func setSubviews() {
         view.addSubview(mainView)
     }
     
